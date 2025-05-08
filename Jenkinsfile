@@ -35,10 +35,10 @@ pipeline {
                     node_modules/.bin/netlify --version  
                     node_modules/.bin/netlify status     
                     echo "Site ID is $NETLIFY_SITE_ID"
+                    node_modules/.bin/netlify deploy --dir = build --prod            
+
                 '''
             }
-        }
-        
-
+        }   
     }
 }
